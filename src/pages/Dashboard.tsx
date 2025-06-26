@@ -8,7 +8,6 @@ import { ReminderBanner } from "@/components/ReminderBanner";
 import { Header } from "@/components/Header";
 import { Task } from "@/types/task";
 import { toast } from "sonner";
-import homepageImage from "@/assets/Homepage.png";
 
 export function Dashboard() {
   const [tasks, setTasks] = useState<Task[]>([]);
@@ -76,21 +75,6 @@ export function Dashboard() {
               />
             </DialogContent>
           </Dialog>
-        </div>
-
-        <div className="flex flex-col md:flex-row items-center gap-8 mb-8">
-          <div className="flex-1">
-            <img 
-              src={homepageImage} 
-              alt="Progress Pulse Dashboard" 
-              className="w-full h-auto rounded-lg shadow-lg"
-            />
-          </div>
-          <div className="flex-1 flex justify-center items-center">
-            <Button size="lg" className="text-lg px-8 py-6">
-              Sign Up Now
-            </Button>
-          </div>
         </div>
         
         <ReminderBanner tasks={tasks} />
